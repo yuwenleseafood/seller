@@ -4,7 +4,7 @@
   const config = window.SITE_CONFIG || {};
   const hiddenProductIds = new Set((config.hiddenProductIds || []).map(String));
   const products = (window.CATALOG?.products || [])
-    .filter(p => !hiddenProductIds.has(String(p.id)) && ((p.categoryKey === 'seafood' || p.category === '海鮮') || !/外箱/u.test(String(p.name || '') + ' ' + String(p.originalName || ''))))
+    .filter(p => !hiddenProductIds.has(String(p.id)))
     .map((p, i) => ({ ...p, order: i, searchText: searchable(p), seafoodTags: (p.categoryKey === 'seafood' || p.category === '海鮮') ? getSeafoodTags(p) : [] }));
   const inquiryOnlyProducts = (config.inquiryOnlyProducts || []).map(p => ({ ...p, id: String(p.id) }));
   const productById = new Map([...products, ...inquiryOnlyProducts].map(p => [String(p.id), p]));
