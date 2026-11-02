@@ -21,7 +21,7 @@
     return String(value || '').normalize('NFKC').toLowerCase().replace(/臺/g, '台').replace(/[\s\p{P}\p{S}]+/gu, ' ').trim();
   }
   function searchable(product) {
-    return normalize([product.name, product.originalName, product.category, product.specification, product.description, product.id].join(' '));
+    return normalize([product.name, product.originalName, product.category, product.specification, product.description, product.sku, product.id].join(' '));
   }
   const seafoodTagOverrides = {
     '55419476534': ['cephalopod'], '43502534848': ['fish'], '41352560472': ['cephalopod'],

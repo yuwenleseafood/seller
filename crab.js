@@ -55,7 +55,7 @@
     body.innerHTML = entries.length ? entries.map(({ product, quantity }) => {
       const image = product.image || product.images?.[0]?.path || 'assets/identity/logo-square.png';
       const name = product.name || `未命名商品（${product.id}）`;
-      return `<article class="crab-cart-item"><img src="${escapeHtml(image)}" alt="${escapeHtml(name)}" loading="lazy"><div><small>${escapeHtml(product.category || '商品')} · ${escapeHtml(product.id)}</small><h3>${escapeHtml(name)}</h3><p>${escapeHtml(product.priceText || '價格請洽詢')}${product.specification ? ` · ${escapeHtml(product.specification)}` : ''}</p><label>數量 <input type="number" min="1" max="9999" value="${quantity}" data-cart-quantity="${escapeHtml(product.id)}" aria-label="${escapeHtml(name)}的數量"></label></div><button type="button" class="crab-cart-remove" data-cart-remove="${escapeHtml(product.id)}" aria-label="移除${escapeHtml(name)}">×</button></article>`;
+      return `<article class="crab-cart-item"><img src="${escapeHtml(image)}" alt="${escapeHtml(name)}" loading="lazy"><div><small>${escapeHtml(product.category || '商品')} · ${escapeHtml(product.sku || product.id)}</small><h3>${escapeHtml(name)}</h3><p>${escapeHtml(product.priceText || '價格請洽詢')}${product.specification ? ` · ${escapeHtml(product.specification)}` : ''}</p><label>數量 <input type="number" min="1" max="9999" value="${quantity}" data-cart-quantity="${escapeHtml(product.id)}" aria-label="${escapeHtml(name)}的數量"></label></div><button type="button" class="crab-cart-remove" data-cart-remove="${escapeHtml(product.id)}" aria-label="移除${escapeHtml(name)}">×</button></article>`;
     }).join('') : '<div class="crab-cart-empty"><h3>目前清單是空的</h3><p>選擇大閘蟹規格並按「點我預購」，商品就會加入這份清單。</p><button type="button" data-cart-close>返回挑選規格</button></div>';
   }
   function openCart() { renderCart(); if (!dialog.open) dialog.showModal(); }
@@ -66,7 +66,7 @@
     for (const [id, quantity] of Object.entries(cart)) {
       const product = productById.get(id);
       if (!product) continue;
-      lines.push(`${++index}. 【${product.category || '商品'}】${product.name || `未命名商品（${id}）`}（編號 ${id}）`, `   詢問數量：${quantity}${product.specification ? '\n   規格：' + product.specification : ''}`);
+      lines.push(`${++index}. 【${product.category || '商品'}】${product.name || `未命名商品（${id}）`}（編號 ${product.sku || id}）`, `   詢問數量：${quantity}${product.specification ? '\n   規格：' + product.specification : ''}`);
     }
     const note = document.getElementById('crab-cart-note').value.trim();
     if (note) lines.push('', '補充需求：' + note);

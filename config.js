@@ -9,14 +9,14 @@ window.SITE_CONFIG = {
   address: "",
   hiddenProductIds: [],
   inquiryOnlyProducts: [
-    { id: "crab-male-8a", name: "【2026黃金大閘蟹】公 8A 太上皇", category: "大閘蟹預購", specification: "巨大公蟹｜11/9 預購上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
-    { id: "crab-male-7a", name: "【2026黃金大閘蟹】公 7A 皇上皇", category: "大閘蟹預購", specification: "巨大公蟹｜11/9 預購上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
-    { id: "crab-male-5a", name: "【2026黃金大閘蟹】公 5A 皇上", category: "大閘蟹預購", specification: "巨大公蟹｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
-    { id: "crab-male-3a", name: "【2026黃金大閘蟹】公 3A", category: "大閘蟹預購", specification: "大公蟹｜6.5–7 兩｜比手掌大｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
-    { id: "crab-male-aa", name: "【2026黃金大閘蟹】公 AA", category: "大閘蟹預購", specification: "大公蟹｜5.8–6.5 兩｜手掌大｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
-    { id: "crab-male-a", name: "【2026黃金大閘蟹】公 A", category: "大閘蟹預購", specification: "大公蟹｜5.3–5.8 兩｜拳頭大｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
-    { id: "crab-female-2a", name: "【2026黃金大閘蟹】母 2A", category: "大閘蟹預購", specification: "母蟹｜5.3–5.8 兩｜拳頭大｜11/3–5 預購（超稀有）", priceText: "價格請洽魚小編", image: "assets/crab/cart-female.png" },
-    { id: "crab-female-a", name: "【2026黃金大閘蟹】母 A", category: "大閘蟹預購", specification: "母蟹｜4.8–5.3 兩｜女生拳頭大｜11/3–5 預購（數量少）", priceText: "價格請洽魚小編", image: "assets/crab/cart-female.png" }
+    { id: "crab-male-8a", sku: "A0301008", name: "【2026黃金大閘蟹】公 8A 太上皇", category: "大閘蟹預購", specification: "巨大公蟹｜11/9 預購上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
+    { id: "crab-male-7a", sku: "A0301009", name: "【2026黃金大閘蟹】公 7A 皇上皇", category: "大閘蟹預購", specification: "巨大公蟹｜11/9 預購上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
+    { id: "crab-male-5a", sku: "A0301010", name: "【2026黃金大閘蟹】公 5A 皇上", category: "大閘蟹預購", specification: "巨大公蟹｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
+    { id: "crab-male-3a", sku: "A0301011", name: "【2026黃金大閘蟹】公 3A", category: "大閘蟹預購", specification: "大公蟹｜6.5–7 兩｜比手掌大｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
+    { id: "crab-male-aa", sku: "A0301012", name: "【2026黃金大閘蟹】公 AA", category: "大閘蟹預購", specification: "大公蟹｜5.8–6.5 兩｜手掌大｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
+    { id: "crab-male-a", sku: "A0301013", name: "【2026黃金大閘蟹】公 A", category: "大閘蟹預購", specification: "大公蟹｜5.3–5.8 兩｜拳頭大｜已上市", priceText: "價格請洽魚小編", image: "assets/crab/cart-male.png" },
+    { id: "crab-female-2a", sku: "A0301014", name: "【2026黃金大閘蟹】母 2A", category: "大閘蟹預購", specification: "母蟹｜5.3–5.8 兩｜拳頭大｜11/3–5 預購（超稀有）", priceText: "價格請洽魚小編", image: "assets/crab/cart-female.png" },
+    { id: "crab-female-a", sku: "A0301015", name: "【2026黃金大閘蟹】母 A", category: "大閘蟹預購", specification: "母蟹｜4.8–5.3 兩｜女生拳頭大｜11/3–5 預購（數量少）", priceText: "價格請洽魚小編", image: "assets/crab/cart-female.png" }
   ],
   catalogDate: "2026-10-31",
   pageSize: 24,
