@@ -22508,8 +22508,8 @@ window.CATALOG =
     },
     {
       "id": "316764",
-      "name": "",
-      "originalName": "",
+      "name": "美國安格斯帶骨牛肩小排",
+      "originalName": "美國安格斯帶骨牛肩小排",
       "category": "牛肉",
       "categoryKey": "beef",
       "specification": "",
@@ -22527,8 +22527,8 @@ window.CATALOG =
     },
     {
       "id": "316762",
-      "name": "",
-      "originalName": "",
+      "name": "美國無骨板腱牛肉",
+      "originalName": "美國無骨板腱牛肉",
       "category": "牛肉",
       "categoryKey": "beef",
       "specification": "",
@@ -24906,8 +24906,8 @@ window.CATALOG =
     },
     {
       "id": "309447",
-      "name": "",
-      "originalName": "",
+      "name": "澳洲羊胸排",
+      "originalName": "澳洲羊胸排",
       "category": "羊肉",
       "categoryKey": "lamb",
       "specification": "",
@@ -27202,8 +27202,8 @@ window.CATALOG =
     },
     {
       "id": "419361",
-      "name": "",
-      "originalName": "",
+      "name": "章魚圓豆腐",
+      "originalName": "章魚圓豆腐",
       "category": "火鍋料",
       "categoryKey": "hotpot",
       "specification": "",
