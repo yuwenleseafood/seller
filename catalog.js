@@ -4,7 +4,7 @@ window.CATALOG =
   "brand": "魚文樂商城",
   "capturedAt": "2026-10-28",
   "counts": {
-    "牛肉": 519,
+    "牛肉": 516,
     "羊肉": 39,
     "雞肉": 14,
     "豬肉": 69,
@@ -22507,25 +22507,6 @@ window.CATALOG =
       "sku": "B0198134"
     },
     {
-      "id": "316765",
-      "name": "",
-      "originalName": "",
-      "category": "牛肉",
-      "categoryKey": "beef",
-      "specification": "",
-      "priceText": "",
-      "description": "",
-      "image": "assets/products/redrawn/meat-product-316765.webp",
-      "gallery": [],
-      "sourceUrl": "https://web.hocom.tw/h/ServiceDetail?key=wvpyq&cont=316765",
-      "sourceImageUrl": "https://web.hocom.tw/Uploads/ClinicService/s/29798/db1025a3-e06b-4984-ac06-b41e751415d2.jpg",
-      "sourceCategory": "牛肉",
-      "sourceCategoryKey": "beef",
-      "order": 1040,
-      "imageStatus": "redrawn",
-      "sku": "B0199001"
-    },
-    {
       "id": "316764",
       "name": "",
       "originalName": "",
@@ -22545,25 +22526,6 @@ window.CATALOG =
       "sku": "B0199002"
     },
     {
-      "id": "316763",
-      "name": "",
-      "originalName": "",
-      "category": "牛肉",
-      "categoryKey": "beef",
-      "specification": "",
-      "priceText": "",
-      "description": "",
-      "image": "assets/products/redrawn/meat-product-316763.webp",
-      "gallery": [],
-      "sourceUrl": "https://web.hocom.tw/h/ServiceDetail?key=wvpyq&cont=316763",
-      "sourceImageUrl": "https://web.hocom.tw/Uploads/ClinicService/s/29798/885dcacd-8425-4bf0-866e-5c599d91e7d1.jpg",
-      "sourceCategory": "牛肉",
-      "sourceCategoryKey": "beef",
-      "order": 1042,
-      "imageStatus": "redrawn",
-      "sku": "B0199003"
-    },
-    {
       "id": "316762",
       "name": "",
       "originalName": "",
@@ -22581,25 +22543,6 @@ window.CATALOG =
       "order": 1043,
       "imageStatus": "redrawn",
       "sku": "B0199004"
-    },
-    {
-      "id": "309460",
-      "name": "",
-      "originalName": "",
-      "category": "牛肉",
-      "categoryKey": "beef",
-      "specification": "",
-      "priceText": "",
-      "description": "",
-      "image": "assets/products/redrawn/meat-product-309460.webp",
-      "gallery": [],
-      "sourceUrl": "https://web.hocom.tw/h/ServiceDetail?key=wvpyq&cont=309460",
-      "sourceImageUrl": "https://web.hocom.tw/Uploads/ClinicService/s/29798/30e9ea5a-9b97-46e0-8fd4-9630fc96a825.jpg",
-      "sourceCategory": "牛肉",
-      "sourceCategoryKey": "beef",
-      "order": 1044,
-      "imageStatus": "redrawn",
-      "sku": "B0199005"
     },
     {
       "id": "318578",
@@ -24198,8 +24141,8 @@ window.CATALOG =
     },
     {
       "id": "253118",
-      "name": "",
-      "originalName": "",
+      "name": "冷凍全雞腿",
+      "originalName": "冷凍全雞腿",
       "category": "雞肉",
       "categoryKey": "chicken",
       "specification": "",
@@ -28250,5 +28193,5 @@ window.CATALOG =
       "sku": "C0199053"
     }
   ],
-  "updatedAt": "2026-10-31"
+  "updatedAt": "2026-11-02"
 };
