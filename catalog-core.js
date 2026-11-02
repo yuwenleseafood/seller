@@ -16,7 +16,6 @@
     { key: 'shellfish', name: '貝類', pattern: /貝|蛤|蠔|牡蠣|蚵|螺|鮑魚|海膽|蜆|淡菜/ },
     { key: 'cephalopod', name: '軟體', pattern: /花枝|魷魚|透抽|小卷|大卷|中卷|章魚|墨魚|軟絲|烏賊|砲管/ },
     { key: 'processed', name: '加工品', pattern: /醬油漬|醬漬|魚子醬|醬汁|醬料|蒲燒|佃煮|味噌|醃漬|醃製|泡菜|裹粉|裹漿|麵衣|天婦羅|酥炸|炸蝦|蝦球|蝦餅|蝦捲|蝦卷|魚丸|花枝丸|甜不辣|魚漿|花枝漿|蟹味棒|蟹肉棒|海鮮卷|海鮮捲|一口吃|煙燻|燻製|魚鬆|可樂餅|鹹酥|烏魚子|照燒|黑胡椒|椒鹽|香辣|麻辣|奶油|起司/ },
-    { key: 'other', name: '其他海鮮', fallback: true }
   ];
   function normalize(value) {
     return String(value || '').normalize('NFKC').toLowerCase().replace(/臺/g, '台').replace(/[\s\p{P}\p{S}]+/gu, ' ').trim();
@@ -40,8 +39,7 @@
     const override = seafoodTagOverrides[String(product.id)];
     if (override) return override.map(key => `seafood-${key}`);
     const text = String(product.name || product.originalName || '').split(/[／/|｜]/, 1)[0].replace(/【?魚文樂商城】?/g, '');
-    const tags = seafoodSubcategories.filter(tag => !tag.fallback && tag.pattern.test(text)).map(tag => `seafood-${tag.key}`);
-    if (!tags.some(tag => tag !== 'seafood-processed')) tags.push('seafood-other');
+    const tags = seafoodSubcategories.filter(tag => tag.pattern.test(text)).map(tag => `seafood-${tag.key}`);
     return tags;
   }
   function filterProducts(products, { query = '', category = 'all', seafoodTag = '', sort = 'source' } = {}) {
