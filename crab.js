@@ -9,7 +9,7 @@
   const footer = document.getElementById('crab-cart-footer');
   const config = window.SITE_CONFIG || {};
   const hiddenIds = new Set((config.hiddenProductIds || []).map(String));
-  const catalogProducts = (window.CATALOG?.products || []).filter(p => !hiddenIds.has(String(p.id)) && !/外箱/u.test(String(p.name || '') + ' ' + String(p.originalName || '')));
+  const catalogProducts = (window.CATALOG?.products || []).filter(p => !hiddenIds.has(String(p.id)));
   const products = [...catalogProducts, ...(config.inquiryOnlyProducts || [])];
   const productById = new Map(products.map(p => [String(p.id), { ...p, id: String(p.id) }]));
   let statusTimer;
