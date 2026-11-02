@@ -766,8 +766,8 @@ window.CATALOG =
     },
     {
       "id": "343662",
-      "name": "永勁黑胡椒牛肋排",
-      "originalName": "永勁黑胡椒牛肋排",
+      "name": "黑胡椒牛肋排",
+      "originalName": "黑胡椒牛肋排",
       "category": "牛肉",
       "categoryKey": "beef",
       "specification": "",
@@ -25325,8 +25325,8 @@ window.CATALOG =
     },
     {
       "id": "253001",
-      "name": "蟹棒-永勁",
-      "originalName": "蟹棒-永勁",
+      "name": "蟹棒",
+      "originalName": "蟹棒",
       "category": "火鍋料",
       "categoryKey": "hotpot",
       "specification": "",
