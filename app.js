@@ -8,6 +8,20 @@
     .map((p, i) => ({ ...p, order: i, searchText: searchable(p), seafoodTags: (p.categoryKey === 'seafood' || p.category === '海鮮') ? getSeafoodTags(p) : [] }));
   const inquiryOnlyProducts = (config.inquiryOnlyProducts || []).map(p => ({ ...p, id: String(p.id) }));
   const productById = new Map([...products, ...inquiryOnlyProducts].map(p => [String(p.id), p]));
+  const monthlyRecommendations = [
+    { month: 1, title: '赤鯮', image: 'assets/monthly-recommendations/01.webp', productId: '26595990070', category: 'seafood' },
+    { month: 2, title: '馬頭魚', image: 'assets/monthly-recommendations/02.webp', productId: '40816096036', category: 'seafood' },
+    { month: 3, title: '小卷', image: 'assets/monthly-recommendations/03.webp', productId: '5890356134', category: 'seafood' },
+    { month: 4, title: '胭脂蝦', image: 'assets/monthly-recommendations/04.webp', productId: '22734440777', category: 'seafood' },
+    { month: 5, title: '黑鮪魚', image: 'assets/monthly-recommendations/05.webp', productId: '49311303275', category: 'seafood' },
+    { month: 6, title: '飛魚卵', image: 'assets/monthly-recommendations/06.webp', productId: '11917722798', category: 'seafood' },
+    { month: 7, title: '牛排', image: 'assets/monthly-recommendations/07.webp', category: 'beef' },
+    { month: 8, title: '和牛', image: 'assets/monthly-recommendations/08.webp', category: 'beef' },
+    { month: 9, title: '大閘蟹', image: 'assets/monthly-recommendations/09.webp', productId: '10359077918', category: 'seafood' },
+    { month: 10, title: '透抽', image: 'assets/monthly-recommendations/10.webp', productId: '53665938145', category: 'seafood' },
+    { month: 11, title: '明蝦', image: 'assets/monthly-recommendations/11.webp', productId: '42775465342', category: 'seafood' },
+    { month: 12, title: '大劍蝦', image: 'assets/monthly-recommendations/12.webp', productId: '5972627302', category: 'seafood' }
+  ];
   const pageSize = config.pageSize || 24;
   const $ = s => document.querySelector(s);
   const state = { category: 'all', seafoodTag: '', query: '', sort: 'source', page: 1 };
@@ -54,10 +68,12 @@
     $('#qr-grid').innerHTML = Object.entries(config.qrItems || {}).map(([key, q]) => `<article class="qr-card"><h3>${esc(q.title)}</h3><button type="button" data-qr="${esc(key)}" aria-label="放大${esc(q.title)} QR 碼"><img src="${esc(q.image)}" alt="${esc(q.title)} QR 碼" width="342" height="341" loading="lazy"></button><a class="text-link" href="${esc(q.url)}" target="_blank" rel="noopener">開啟連結 ↗</a></article>`).join('');
   }
   function renderCategoryTiles() {
-    $('#category-tiles').innerHTML = categories.map((c, i) => {
-      const p = productById.get(c.heroId) || products.find(p => p.categoryKey === c.key && imageOf(p));
-      const cover = config.categoryImages?.[c.key];
-      return `<button type="button" class="category-tile" data-category="${c.key}"><div class="category-tile-image">${cover ? `<img src="${esc(cover)}" alt="${esc(c.name)}分類" loading="lazy">` : p ? imageMarkup(p) : ''}<span class="category-sequence">0${i + 1}</span></div><div class="category-tile-label"><span><b>${c.name}</b><small>${c.english}</small></span><span class="category-arrow" aria-hidden="true">↗</span></div></button>`;
+    $('#category-tiles').innerHTML = monthlyRecommendations.map(item => {
+      const product = item.productId ? productById.get(item.productId) : null;
+      const category = categories.find(c => c.key === item.category);
+      const action = product ? `data-detail="${esc(product.id)}"` : `data-category="${esc(item.category)}"`;
+      const actionLabel = product ? '查看商品' : `瀏覽${category?.name || '商品'}分類`;
+      return `<button type="button" class="category-tile monthly-recommendation" ${action} aria-label="${item.month}月推薦：${esc(item.title)}，${actionLabel}"><div class="category-tile-image"><img src="${esc(item.image)}" alt="${item.month}月推薦：${esc(item.title)}" loading="lazy" decoding="async"><span class="category-sequence">${String(item.month).padStart(2, '0')}</span></div><div class="category-tile-label"><span><b>${esc(item.title)}</b><small>${item.month} 月推薦</small></span><span class="category-arrow" aria-hidden="true">↗</span></div></button>`;
     }).join('');
   }
   function renderCategoryFilters() {
