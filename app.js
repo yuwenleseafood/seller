@@ -9,11 +9,11 @@
   const inquiryOnlyProducts = (config.inquiryOnlyProducts || []).map(p => ({ ...p, id: String(p.id) }));
   const productById = new Map([...products, ...inquiryOnlyProducts].map(p => [String(p.id), p]));
   const monthlyRecommendations = [
-    { month: 1, title: '赤鯮', image: 'assets/monthly-recommendations/01.webp', productId: '26595990070', category: 'seafood' },
-    { month: 2, title: '馬頭魚', image: 'assets/monthly-recommendations/02.webp', productId: '40816096036', category: 'seafood' },
-    { month: 3, title: '小卷', image: 'assets/monthly-recommendations/03.webp', productId: '5890356134', category: 'seafood' },
-    { month: 4, title: '胭脂蝦', image: 'assets/monthly-recommendations/04.webp', productId: '22734440777', category: 'seafood' },
-    { month: 5, title: '黑鮪魚', image: 'assets/monthly-recommendations/05.webp', productId: '49311303275', category: 'seafood' },
+    { month: 1, title: '赤鯮', image: 'assets/monthly-recommendations/01-v2.webp', productId: '26595990070', category: 'seafood' },
+    { month: 2, title: '馬頭魚', image: 'assets/monthly-recommendations/02-v2.webp', productId: '40816096036', category: 'seafood' },
+    { month: 3, title: '小卷', image: 'assets/monthly-recommendations/03-v2.webp', productId: '5890356134', category: 'seafood' },
+    { month: 4, title: '胭脂蝦', image: 'assets/monthly-recommendations/04-v2.webp', productId: '22734440777', category: 'seafood' },
+    { month: 5, title: '黑鮪魚', image: 'assets/monthly-recommendations/05-v2.webp', productId: '49311303275', category: 'seafood' },
     { month: 6, title: '飛魚卵', image: 'assets/monthly-recommendations/06.webp', productId: '11917722798', category: 'seafood' },
     { month: 7, title: '牛排', image: 'assets/monthly-recommendations/07.webp', category: 'beef' },
     { month: 8, title: '和牛', image: 'assets/monthly-recommendations/08.webp', category: 'beef' },
@@ -73,7 +73,7 @@
       const category = categories.find(c => c.key === item.category);
       const action = product ? `data-detail="${esc(product.id)}"` : `data-category="${esc(item.category)}"`;
       const actionLabel = product ? '查看商品' : `瀏覽${category?.name || '商品'}分類`;
-      return `<button type="button" class="category-tile monthly-recommendation" ${action} aria-label="${item.month}月推薦：${esc(item.title)}，${actionLabel}"><div class="category-tile-image"><img src="${esc(item.image)}" alt="${item.month}月推薦：${esc(item.title)}" loading="lazy" decoding="async"><span class="category-sequence">${String(item.month).padStart(2, '0')}</span></div><div class="category-tile-label"><span><b>${esc(item.title)}</b><small>${item.month} 月推薦</small></span><span class="category-arrow" aria-hidden="true">↗</span></div></button>`;
+      return `<button type="button" class="category-tile monthly-recommendation" ${action} aria-label="${item.month}月推薦：${esc(item.title)}，${actionLabel}"><div class="category-tile-image"><img src="${esc(item.image)}" alt="${item.month}月推薦：${esc(item.title)}" loading="lazy" decoding="async"><span class="category-sequence">${String(item.month).padStart(2, '0')}</span></div><div class="category-tile-label"><span class="monthly-recommendation-caption">${item.month}月推薦 <b>${esc(item.title)}</b></span><span class="category-arrow" aria-hidden="true">↗</span></div></button>`;
     }).join('');
   }
   function renderCategoryFilters() {
