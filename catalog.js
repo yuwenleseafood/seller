@@ -9,7 +9,7 @@ window.CATALOG =
     "雞肉": 14,
     "豬肉": 69,
     "鴨肉": 3,
-    "海鮮": 526,
+    "海鮮": 524,
     "火鍋料": 166
   },
   "products": [
@@ -134,30 +134,6 @@ window.CATALOG =
       "sku": "A0101005"
     },
     {
-      "id": "24969374365",
-      "name": "【魚文樂商城】智利銀鮭/鮭魚/生魚片/鮭魚清肉/生食級/日本料理店/每片1.8-2.0K",
-      "originalName": "【魚文樂商城】智利銀鮭/鮭魚/生魚片/鮭魚清肉/生食級/日本料理店/每片1.8-2.0K",
-      "category": "海鮮",
-      "categoryKey": "seafood",
-      "specification": "",
-      "priceText": "",
-      "description": "",
-      "image": "assets/products/shopee-24969374365.jpg",
-      "gallery": [],
-      "sourceKind": "shopee",
-      "shopId": "54213491",
-      "externalItemId": "24969374365",
-      "sourceUrl": "https://shopee.tw/a24692346",
-      "sourceImageUrl": "https://s-cf-tw.shopeesz.com/file/sg-11134201-825b8-msaw8ag5nw9330",
-      "sourceCategory": "101603 - Food & Beverages/Fresh & Frozen Food/Seafood/Fish",
-      "sourceCategoryKey": "seafood",
-      "sourceRow": 381,
-      "sourceFile": "mass_update_media_info_54213491_20261031131251.xlsx",
-      "order": 5,
-      "imageStatus": "original",
-      "sku": "A0101006"
-    },
-    {
       "id": "24619392962",
       "name": "【魚文樂商城】頂級帝王鮭魚頭／鮭魚頭／1顆 300~500g／帝王鮭魚頭／鮭魚／燒烤／中秋／煮湯／帝王鮭",
       "originalName": "【魚文樂商城】頂級帝王鮭魚頭／鮭魚頭／1顆 300~500g／帝王鮭魚頭／鮭魚／燒烤／中秋／煮湯／帝王鮭",
@@ -180,30 +156,6 @@ window.CATALOG =
       "order": 6,
       "imageStatus": "original",
       "sku": "A0101007"
-    },
-    {
-      "id": "24167651438",
-      "name": "【魚文樂商城】鮭魚肚/鮭魚生魚片/鮭魚/智利銀鮭/銀鮭生魚片/每片1.8/2K/生魚片/生食級/日本料理/鮭魚清肉",
-      "originalName": "【魚文樂商城】鮭魚肚/鮭魚生魚片/鮭魚/智利銀鮭/銀鮭生魚片/每片1.8/2K/生魚片/生食級/日本料理/鮭魚清肉",
-      "category": "海鮮",
-      "categoryKey": "seafood",
-      "specification": "",
-      "priceText": "",
-      "description": "",
-      "image": "assets/products/shopee-24167651438.jpg",
-      "gallery": [],
-      "sourceKind": "shopee",
-      "shopId": "54213491",
-      "externalItemId": "24167651438",
-      "sourceUrl": "https://shopee.tw/a24692346",
-      "sourceImageUrl": "https://s-cf-tw.shopeesz.com/file/sg-11134201-8259c-msaw8jbs1mh695",
-      "sourceCategory": "101603 - Food & Beverages/Fresh & Frozen Food/Seafood/Fish",
-      "sourceCategoryKey": "seafood",
-      "sourceRow": 416,
-      "sourceFile": "mass_update_media_info_54213491_20261031131251.xlsx",
-      "order": 7,
-      "imageStatus": "original",
-      "sku": "A0101008"
     },
     {
       "id": "22455464508",
@@ -28193,5 +28145,5 @@ window.CATALOG =
       "sku": "C0199053"
     }
   ],
-  "updatedAt": "2026-11-02"
+  "updatedAt": "2026-11-06"
 };
